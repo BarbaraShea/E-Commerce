@@ -45,6 +45,7 @@ router.post('/', async (req, res) => {
   }});
 
 router.put('/:id', async (req, res) => {
+  console.log("Route Hit!", req.params.id);
   try {
     const categoryData = await Category.update(req.body, {
     where: {
